@@ -1,3 +1,9 @@
+**Wellness24**
+
+The app that connects doctors and patients 24 hours a day, 7 days a week.
+
+---------------------------------------------------------------------------------------------------------
+
 This project requires that Flutter is installed.
 
 Steps to run, compile and execute the prototype:
