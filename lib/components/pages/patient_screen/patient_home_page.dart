@@ -3,6 +3,7 @@ import 'package:wellness24/components/common/app_bar.dart';
 import 'package:wellness24/components/common/loading_animation.dart';
 import 'package:wellness24/components/common/schedule_card.dart';
 import 'package:wellness24/components/pages/common_pages/chat/messages.dart';
+import 'package:wellness24/components/pages/common_pages/login_page.dart';
 import 'package:wellness24/components/pages/common_pages/patient_profile/patient_profile.dart';
 import 'package:wellness24/components/pages/patient_screen/messages_patient.dart';
 import 'package:wellness24/components/pages/patient_screen/emergency_page.dart';
@@ -39,6 +40,10 @@ class _PatientHomePageState extends State<PatientHomePage> {
     User currentUser = Provider.of<User>(context);
     // Patient currentPatient = Provider.of<Patient>(context);
 
+    if (currentUser == null) {
+      return Login();
+    }
+
     initializePatient(currentUser.uid);
 
     return Scaffold(
@@ -58,7 +63,8 @@ class _PatientHomePageState extends State<PatientHomePage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.message),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => PatientMessages()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => PatientMessages()));
         },
       ),
       body: currentPatient == null
@@ -186,7 +192,8 @@ class _PatientHomePageState extends State<PatientHomePage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => EmergencyPage(patient: currentPatient)));
+                                      builder: (context) => EmergencyPage(
+                                          patient: currentPatient)));
                             },
                             style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.symmetric(
