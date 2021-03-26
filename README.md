@@ -1,16 +1,8 @@
-# wellness24
+This project requires that Flutter is installed.
 
-A new Flutter project.
+Steps to run, compile and execute the prototype:
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Navigate to main.dart inside the lib folder.
+2. Connect an emulator or an android device.
+3. Click Run Without Debugging on the bar on the top right side if you are using Visual Studio Code.
+4. The app should now run on the emulator or device after being compiled.
